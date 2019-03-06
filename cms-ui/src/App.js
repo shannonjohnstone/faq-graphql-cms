@@ -3,8 +3,8 @@ import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import Home from './Home'
-import DummyQuery from './DummyQuery'
+import Home from './containers/Home'
+import Faqs from './containers/Faqs'
 
 import './App.css'
 
@@ -22,7 +22,7 @@ class App extends Component {
           <Router>
             <Fragment>
               <Route path="/" exact component={Home} />
-              <Route path="/faqs" exact component={DummyQuery} />
+              <Route path="/faqs" exact component={Faqs} />
             </Fragment>
           </Router>
         </div>
