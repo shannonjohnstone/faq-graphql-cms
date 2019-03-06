@@ -2,11 +2,18 @@ import { gql } from 'apollo-server'
 
 export default gql`
   type Query {
-    users: [User]!
+    home: Home!
+    faqs: [Faq]!
   }
 
-  type User {
-    id: ID!
-    name: String!
+  type Home {
+    heading: String!
+    subheading: String!
+    heroImageUrl: String!
+  }
+
+  type Faq {
+    title: String!
+    body: String!
   }
 `

@@ -5,7 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js --ext js,graphql --exec babel-node",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=10.12"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   },
   "keywords": [
     "node",
@@ -15,15 +24,22 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.4.8",
-    "babel-cli": "^6.26.0",
+    "graphql": "^14.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "babel-eslint": "^10.0.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "babel-jest": "^24.1.0",
     "eslint": "^5.15.1",
     "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-jest": "^22.3.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-prettier": "^3.0.1",
-    "graphql": "^14.1.1",
+    "jest": "^24.1.0",
     "nodemon": "^1.18.10",
     "prettier": "^1.16.4"
   }

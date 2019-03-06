@@ -4,6 +4,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:node/recommended',
     'plugin:prettier/recommended',
+    'plugin:jest/recommended',
   ],
   rules: {
     'object-curly-spacing': ['error', 'always'],
