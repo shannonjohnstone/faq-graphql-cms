@@ -1,0 +1,30 @@
+{
+  "name": "faq-graphql-cms",
+  "version": "1.0.0",
+  "description": "FAQ powered graphQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run-p start:*",
+    "start:service": "npm run start --prefix cms-service/",
+    "start:ui": "npm start --prefix cms-ui/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shannonjohnstone/faq-graphql-cms.git"
+  },
+  "keywords": [
+    "react",
+    "graphql",
+    "node"
+  ],
+  "author": "Shannon Johnstone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shannonjohnstone/faq-graphql-cms/issues"
+  },
+  "homepage": "https://github.com/shannonjohnstone/faq-graphql-cms#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
