@@ -5,8 +5,8 @@ describe('repository', () => {
   let repository
   beforeEach(() => (repository = dataRepository(database)))
 
-  test('getHome', () => {
-    expect(repository.getHome()).toEqual({
+  test('getHome', async () => {
+    expect(await repository.getHome()).toEqual({
       heading: 'Qantas Cars',
       heroImageUrl:
         'https://drive.google.com/uc?id=1svw9VdyX4fyRHd1kggq0akDSafmdOS7L',
@@ -15,8 +15,8 @@ describe('repository', () => {
     })
   })
 
-  test('getFaqs', () => {
-    expect(repository.getFaqs()).toEqual([
+  test('getFaqs', async () => {
+    expect(await repository.getFaqs()).toEqual([
       {
         body:
           'Model 3 reservation holders can check their latest delivery timing estimate in their Tesla Account.',

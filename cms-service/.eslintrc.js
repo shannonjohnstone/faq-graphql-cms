@@ -17,8 +17,8 @@ module.exports = {
       "ignoreStrings": true
     }],
     "node/no-unsupported-features/es-syntax": ["error", {
-      "version": ">=6.0.0",
-      "ignores": ["modules", "trailingCommasInFunctions"]
+      "version": ">=10.15",
+      "ignores": ["modules",]
     }]
   }
 }

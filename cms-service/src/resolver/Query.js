@@ -1,9 +1,11 @@
-// initial dummy data
+// resolvers
 export default {
-  home(parent, args, { repository }) {
+  async homepage(parent, args, { repository }) {
+    // return all home data
     return repository.getHome()
   },
-  faqs(parent, args, { repository }) {
+  async faqs(parent, args, { repository }) {
+    // return all faqs
     return repository.getFaqs()
   },
 }
