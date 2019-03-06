@@ -2,12 +2,11 @@ import express from 'express'
 import { ApolloServer } from 'apollo-server-express'
 import typeDefs from './schema/schema.js'
 import resolvers from './resolver'
+import database from './database'
+import dataRepository from './repository'
 
 const PORT = 4000
 const app = express()
-
-import database from './database'
-import dataRepository from './repository'
 
 const server = new ApolloServer({
   typeDefs,

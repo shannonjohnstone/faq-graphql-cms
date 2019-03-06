@@ -6,7 +6,7 @@ import DummyQuery from './DummyQuery'
 import './App.css'
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000',
+  uri: 'http://localhost:4000/content',
 })
 
 class App extends Component {
