@@ -1,20 +1,12 @@
-import express from 'express'
-import { ApolloServer } from 'apollo-server-express'
-import typeDefs from './schema/schema.js'
-import resolvers from './resolver'
-import database from './database'
-import dataRepository from './repository'
+/* eslint no-console: 0 */
+import { start, config } from './config/server'
+import graphqlServer from './config/graphqlServer'
 
-const PORT = 4000
-const app = express()
+const app = start()
+const server = graphqlServer()
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context: {
-    repository: dataRepository(database),
-  },
-})
+server.applyMiddleware({ app, path: config.ENDPOINT })
 
-server.applyMiddleware({ app, path: '/content' })
-app.listen({ port: PORT }, () => console.log(`Server start: http://localhost:${PORT}${server.graphqlPath}`)) // eslint-disable-line
+app.listen({ port: config.PORT }, () =>
+  console.log(`Server start: ${config.URL}${config.PORT}${server.graphqlPath}`),
+)
