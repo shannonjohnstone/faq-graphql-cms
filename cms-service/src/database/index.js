@@ -5,25 +5,27 @@ function databaseDelay(ms, data) {
   return new Promise(resolve => setTimeout(() => resolve(data), ms))
 }
 
-const dataSource = data => {
+const dataSourceSingleton = data => {
   let instance
 
   return {
     getData: () => {
-      if (!instance) instance = { ...data }
+      if (!instance) {
+        instance = { ...data }
+      }
       return instance
     },
   }
 }
 
 // in memory implementation of a basic db
-const data = dataSource(mockData).getData()
+const data = dataSourceSingleton(mockData)
 
 export default {
   homepage: {
-    find: () => databaseDelay(1000, data.homepage),
+    find: () => databaseDelay(1000, data.getData().homepage),
   },
   faqs: {
-    find: () => databaseDelay(1000, data.faqs),
+    find: () => databaseDelay(1000, data.getData().faqs),
   },
 }
