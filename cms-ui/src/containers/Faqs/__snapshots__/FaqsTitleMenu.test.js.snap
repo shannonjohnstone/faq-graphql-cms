@@ -2,23 +2,25 @@
 
 exports[`FaqDetail should render faq menu 1`] = `
 <div>
-  <button
-    class="faq-menu-item active disabled btn btn-link"
-    type="button"
-  >
-    How can I check my estimated delivery window?
-  </button>
-  <button
-    class="faq-menu-item btn btn-link"
-    type="button"
-  >
-    When will I be invited to configure my Model 3, and when can I take delivery?
-  </button>
-  <button
-    class="faq-menu-item btn btn-link"
-    type="button"
-  >
-    Which Model 3 features are currently available?
-  </button>
+  <nav>
+    <button
+      class="faq-menu-item active disabled btn btn-link"
+      type="button"
+    >
+      How can I check my estimated delivery window?
+    </button>
+    <button
+      class="faq-menu-item btn btn-link"
+      type="button"
+    >
+      When will I be invited to configure my Model 3, and when can I take delivery?
+    </button>
+    <button
+      class="faq-menu-item btn btn-link"
+      type="button"
+    >
+      Which Model 3 features are currently available?
+    </button>
+  </nav>
 </div>
 `;
