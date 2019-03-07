@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import FetchData from '../../components/FetchData'
 import { Link } from 'react-router-dom'
-import './Home.css'
 
 import { HOME_QUERY } from '../../graphqlClient/queries'
 
-const Home = () => {
+const HomeContainer = () => {
   const [backgroundUrl, setBackgroundUrl] = useState('')
   const [sectionStyles, setSectionStyles] = useState({})
 
@@ -37,4 +36,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomeContainer

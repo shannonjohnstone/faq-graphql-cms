@@ -5,6 +5,10 @@ import { render, cleanup, getByText, getByTestId } from 'react-testing-library'
 import { MockedProvider } from 'react-apollo/test-utils'
 import wait from 'waait'
 
+/**
+ * Centralize testing tools
+ */
+
 export { wait, MockedProvider, render, cleanup, getByText, getByTestId }
 
 export function renderWithRouter(

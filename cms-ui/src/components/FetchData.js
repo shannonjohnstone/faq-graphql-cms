@@ -1,8 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Query, Mutation } from '../graphqlClient'
 import { SET_LOADING } from '../graphqlClient/mutations'
 import CallMutation from '../components/CallMutation'
 
+/**
+ * FetchData
+ * render props component for managing data fetching
+ * and isLoading state
+ */
 const FetchData = props => {
   return (
     <Query {...props} data-testid="fetchData">
@@ -22,6 +28,10 @@ const FetchData = props => {
       )}
     </Query>
   )
+}
+
+FetchData.propTypes = {
+  query: PropTypes.object.isRequired,
 }
 
 export default FetchData

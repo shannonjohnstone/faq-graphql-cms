@@ -1,5 +1,8 @@
 import gql from 'graphql-tag'
 
+/**
+ * graphql queriers
+ */
 export const LOADING_QUERY = gql`
   {
     isLoading @client

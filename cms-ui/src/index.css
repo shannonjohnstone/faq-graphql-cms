@@ -37,6 +37,9 @@ body {
 
 h1 {
   font-size: 60px;
+  font-family: 'CiutadellaW04-Bold', BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .page-section {
@@ -45,4 +48,9 @@ h1 {
 
 .white {
   color: white
+}
+
+.home {
+  background-size: cover !important;
+  min-height: 100%;
 }
