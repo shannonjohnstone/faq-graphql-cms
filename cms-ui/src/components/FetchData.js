@@ -18,7 +18,7 @@ const CallMutation = props => {
 
 const FetchData = props => {
   return (
-    <Query query={props.query}>
+    <Query {...props}>
       {({ loading, error, data }) => (
         <Mutation mutation={SET_LOADING}>
           {setLoading => {

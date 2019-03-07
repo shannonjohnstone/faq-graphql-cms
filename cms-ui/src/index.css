@@ -1,14 +1,39 @@
+html, body, #root {
+  height: 100%;
+}
+
+@font-face {font-family: "CiutadellaW04-Lt";
+    src: url("//db.onlinewebfonts.com/t/0d0e90eb107486ca06f62c39a3c15f4e.eot");
+    src: url("//db.onlinewebfonts.com/t/0d0e90eb107486ca06f62c39a3c15f4e.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/0d0e90eb107486ca06f62c39a3c15f4e.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/0d0e90eb107486ca06f62c39a3c15f4e.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/0d0e90eb107486ca06f62c39a3c15f4e.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/0d0e90eb107486ca06f62c39a3c15f4e.svg#CiutadellaW04-Lt") format("svg");
+}
+
+@font-face {font-family: "CiutadellaW04-Bold";
+    src: url("//db.onlinewebfonts.com/t/6cfda2958e863ef8dc3c6ba3dd4a6ae2.eot");
+    src: url("//db.onlinewebfonts.com/t/6cfda2958e863ef8dc3c6ba3dd4a6ae2.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/6cfda2958e863ef8dc3c6ba3dd4a6ae2.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/6cfda2958e863ef8dc3c6ba3dd4a6ae2.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/6cfda2958e863ef8dc3c6ba3dd4a6ae2.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/6cfda2958e863ef8dc3c6ba3dd4a6ae2.svg#CiutadellaW04-Bold") format("svg");
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: 'CiutadellaW04-Lt', BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1 {
+  font-size: 60px;
+}
+
+.page-section {
+  padding-top: 4rem;
 }
