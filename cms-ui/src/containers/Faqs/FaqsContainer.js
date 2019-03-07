@@ -18,15 +18,15 @@ const Faqs = () => {
             <Link to="/">&lt; Back</Link>
             <h1>FAQS</h1>
             <Row>
-              <Col lg={{ span: 8 }}>
-                <FaqDetail faqs={faqs} selectedId={selectedId} />
-              </Col>
-              <Col lg={{ span: 3 }}>
+              <Col lg={{ span: 3, order: 12 }}>
                 <FaqsTitleMenu
                   faqs={faqs}
                   selectedId={selectedId}
                   handleOnClick={setSelectedFaqs}
                 />
+              </Col>
+              <Col lg={{ span: 8 }}>
+                <FaqDetail faqs={faqs} selectedId={selectedId} />
               </Col>
             </Row>
           </Container>

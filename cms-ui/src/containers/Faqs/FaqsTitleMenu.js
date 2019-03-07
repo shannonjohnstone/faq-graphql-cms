@@ -1,27 +1,32 @@
 import React from 'react'
-import { Nav } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
-const FaqsTitleMenu = ({ faqs = [], handleOnClick, selectedIndex = '1' }) => (
-  <Nav variant="tabs">
+const FaqsTitleMenu = ({ faqs = [], handleOnClick, selectedId = '1' }) => (
+  <nav>
     {faqs.length
       ? faqs.map(faq => (
-          <Nav.Link
-            className={faq.id === selectedIndex ? 'active' : ''}
+          <Button
+            variant="link"
+            className={
+              faq.id === selectedId
+                ? 'faq-menu-item active disabled'
+                : 'faq-menu-item'
+            }
             key={faq.id}
             onClick={() => handleOnClick(faq.id)}
           >
             {faq.title}
-          </Nav.Link>
+          </Button>
         ))
       : null}
-  </Nav>
+  </nav>
 )
 
 FaqsTitleMenu.propTypes = {
   faqs: PropTypes.array,
   handleOnClick: PropTypes.func.isRequired,
-  selectedIndex: PropTypes.string,
+  selectedId: PropTypes.string,
 }
 
 export default FaqsTitleMenu

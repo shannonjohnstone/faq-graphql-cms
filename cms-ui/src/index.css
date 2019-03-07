@@ -43,14 +43,26 @@ h1 {
 }
 
 .page-section {
-  padding-top: 4rem;
+  padding-top: 2rem;
 }
 
-.white {
+.text-color-white {
   color: white
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-align-item {
+  text-align: left
 }
 
 .home {
   background-size: cover !important;
   min-height: 100%;
+}
+
+.faq-menu-item {
+  text-align: left
 }
