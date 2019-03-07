@@ -12,7 +12,6 @@ const Home = () => {
 
   useEffect(() => {
     setSectionStyles({
-      // background: `url(${backgroundUrl}) no-repeat linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1))`,
       background: `linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.40) 100%), url(${backgroundUrl}) no-repeat`,
     })
   }, [backgroundUrl])
