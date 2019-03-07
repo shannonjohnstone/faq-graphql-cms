@@ -1,19 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import FetchData from '../../components/FetchData'
-import gql from 'graphql-tag'
 import { Link } from 'react-router-dom'
 import './Home.css'
 
-const HOME_QUERY = gql`
-  {
-    homepage {
-      heading
-      subheading
-      heroImageUrl
-    }
-  }
-`
+import { HOME_QUERY } from '../../graphqlClient/queries'
 
 const Home = () => {
   const [backgroundUrl, setBackgroundUrl] = useState('')

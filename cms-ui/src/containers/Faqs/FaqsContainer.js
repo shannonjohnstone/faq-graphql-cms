@@ -4,17 +4,7 @@ import FetchData from '../../components/FetchData'
 import FaqsTitleMenu from './FaqsTitleMenu'
 import FaqDetail from './FaqDetail'
 
-import gql from 'graphql-tag'
-
-const FAQS_QUERY = gql`
-  {
-    isLoading @client
-    faqs {
-      title
-      body
-    }
-  }
-`
+import { FAQS_QUERY } from '../../graphqlClient/queries'
 
 const Faqs = () => {
   const [selectedIndex, setSelectedFaqs] = useState(0)

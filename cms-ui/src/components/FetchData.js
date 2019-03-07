@@ -1,12 +1,6 @@
 import React, { useEffect } from 'react'
-import { Query, Mutation } from 'react-apollo'
-import gql from 'graphql-tag'
-
-const SET_LOADING = gql`
-  mutation SetLoading($state: String!) {
-    setLoading(state: $state) @client
-  }
-`
+import { Query, Mutation } from '../graphqlClient'
+import { SET_LOADING } from '../graphqlClient/mutations'
 
 const CallMutation = props => {
   useEffect(() => {
