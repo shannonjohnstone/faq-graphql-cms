@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const FaqsDetail = ({ faqs = [], selectedIndex }) =>
+const FaqsDetail = ({ faqs = [], selectedId = '1' }) =>
   faqs.length
     ? faqs
-        .filter((item, index) => index === selectedIndex)
+        .filter(item => item.id === selectedId)
         .map(faq => (
-          <section key={faq.title}>
+          <section key={faq.id}>
             <h2>{faq.title}</h2>
             <p dangerouslySetInnerHTML={{ __html: faq.body }} />
           </section>
@@ -15,7 +15,7 @@ const FaqsDetail = ({ faqs = [], selectedIndex }) =>
 
 FaqsDetail.propTypes = {
   faqs: PropTypes.array,
-  selectedIndex: PropTypes.number,
+  selectedId: PropTypes.string,
 }
 
 export default FaqsDetail

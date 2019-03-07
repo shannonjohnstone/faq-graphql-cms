@@ -4,8 +4,8 @@ export default {
     // return all home data
     return repository.getHome()
   },
-  async faqs(parent, args, { repository }) {
+  async faqs(parent, args, { repository, faqsService }) {
     // return all faqs
-    return repository.getFaqs()
+    return faqsService.addIdToFaq(await repository.getFaqs())
   },
 }

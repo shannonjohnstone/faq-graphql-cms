@@ -11,8 +11,8 @@ const mocks = [
     result: {
       data: {
         faqs: [
-          { title: 'this is a title 1', body: 'This is the body 1' },
-          { title: 'this is a title 2', body: 'This is the body 2' },
+          { id: '1', title: 'this is a title 1', body: 'This is the body 1' },
+          { id: '2', title: 'this is a title 2', body: 'This is the body 2' },
         ],
       },
     },

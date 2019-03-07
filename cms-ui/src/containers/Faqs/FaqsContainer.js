@@ -8,7 +8,7 @@ import FaqDetail from './FaqDetail'
 import { FAQS_QUERY } from '../../graphqlClient/queries'
 
 const Faqs = () => {
-  const [selectedIndex, setSelectedFaqs] = useState(0)
+  const [selectedId, setSelectedFaqs] = useState('1')
   return (
     <FetchData
       query={FAQS_QUERY}
@@ -19,12 +19,12 @@ const Faqs = () => {
             <h1>FAQS</h1>
             <Row>
               <Col lg={{ span: 8 }}>
-                <FaqDetail faqs={faqs} selectedIndex={selectedIndex} />
+                <FaqDetail faqs={faqs} selectedId={selectedId} />
               </Col>
               <Col lg={{ span: 3 }}>
                 <FaqsTitleMenu
                   faqs={faqs}
-                  selectedIndex={selectedIndex}
+                  selectedId={selectedId}
                   handleOnClick={setSelectedFaqs}
                 />
               </Col>

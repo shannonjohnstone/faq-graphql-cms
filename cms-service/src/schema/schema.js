@@ -13,6 +13,7 @@ export default gql`
   }
 
   type Faq {
+    id: ID!
     title: String!
     body: String!
   }

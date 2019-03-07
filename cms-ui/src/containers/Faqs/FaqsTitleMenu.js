@@ -2,14 +2,14 @@ import React from 'react'
 import { Nav } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
-const FaqsTitleMenu = ({ faqs = [], handleOnClick, selectedIndex = 0 }) => (
+const FaqsTitleMenu = ({ faqs = [], handleOnClick, selectedIndex = '1' }) => (
   <Nav variant="tabs">
     {faqs.length
-      ? faqs.map((faq, i) => (
+      ? faqs.map(faq => (
           <Nav.Link
-            className={selectedIndex === i ? 'active' : ''}
-            key={faq.title}
-            onClick={() => handleOnClick(i)}
+            className={faq.id === selectedIndex ? 'active' : ''}
+            key={faq.id}
+            onClick={() => handleOnClick(faq.id)}
           >
             {faq.title}
           </Nav.Link>
@@ -21,7 +21,7 @@ const FaqsTitleMenu = ({ faqs = [], handleOnClick, selectedIndex = 0 }) => (
 FaqsTitleMenu.propTypes = {
   faqs: PropTypes.array,
   handleOnClick: PropTypes.func.isRequired,
-  selectedIndex: PropTypes.number,
+  selectedIndex: PropTypes.string,
 }
 
 export default FaqsTitleMenu

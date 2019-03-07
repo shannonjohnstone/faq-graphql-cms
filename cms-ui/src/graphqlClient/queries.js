@@ -18,6 +18,7 @@ export const FAQS_QUERY = gql`
   {
     isLoading @client
     faqs {
+      id
       title
       body
     }

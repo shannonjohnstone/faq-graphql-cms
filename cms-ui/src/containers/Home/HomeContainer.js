@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Button } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import FetchData from '../../components/FetchData'
 import { Link } from 'react-router-dom'
 import './Home.css'
