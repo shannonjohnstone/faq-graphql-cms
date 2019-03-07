@@ -12,7 +12,8 @@ const Home = () => {
 
   useEffect(() => {
     setSectionStyles({
-      background: `url(${backgroundUrl}) no-repeat`,
+      // background: `url(${backgroundUrl}) no-repeat linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1))`,
+      background: `linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.40) 100%), url(${backgroundUrl}) no-repeat`,
     })
   }, [backgroundUrl])
 
@@ -28,8 +29,8 @@ const Home = () => {
         return (
           <section className="home page-section" style={sectionStyles}>
             <Container>
-              <h1>{homepage.heading}</h1>
-              <h2>{homepage.subheading}</h2>
+              <h1 className="white">{homepage.heading}</h1>
+              <h2 className="white">{homepage.subheading}</h2>
               {homepage.heading && <Link to="/faqs">Learn more</Link>}
             </Container>
           </section>

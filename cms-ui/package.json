@@ -35,6 +35,7 @@
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "prettier": "^1.16.4",
-    "react-testing-library": "^6.0.0"
+    "react-testing-library": "^6.0.0",
+    "waait": "^1.0.4"
   }
 }

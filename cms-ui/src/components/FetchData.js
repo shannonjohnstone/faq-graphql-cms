@@ -1,14 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Query, Mutation } from '../graphqlClient'
 import { SET_LOADING } from '../graphqlClient/mutations'
-
-const CallMutation = props => {
-  useEffect(() => {
-    props.mutation()
-  }, [props.watcher])
-
-  return props.children
-}
+import CallMutation from '../components/CallMutation'
 
 const FetchData = props => {
   return (

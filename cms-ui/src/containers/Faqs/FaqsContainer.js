@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 import FetchData from '../../components/FetchData'
 import FaqsTitleMenu from './FaqsTitleMenu'
@@ -14,6 +15,7 @@ const Faqs = () => {
       render={({ faqs = [] }) => {
         return (
           <Container className="page-section">
+            <Link to="/">&lt; Back</Link>
             <h1>FAQS</h1>
             <Row>
               <Col lg={{ span: 8 }}>

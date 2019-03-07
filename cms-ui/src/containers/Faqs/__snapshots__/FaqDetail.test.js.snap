@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FaqDetail should render faq 1`] = `
+<div>
+  <section>
+    <h2>
+      How can I check my estimated delivery window?
+    </h2>
+    <p>
+      Model 3 reservation holders can check their latest delivery timing estimate in their Tesla Account.
+    </p>
+  </section>
+</div>
+`;

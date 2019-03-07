@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FaqDetail should render faq menu 1`] = `
+<div>
+  <div
+    class="nav nav-tabs"
+  >
+    <a
+      class="active nav-link"
+      href="#"
+      role="button"
+    >
+      How can I check my estimated delivery window?
+    </a>
+    <a
+      class="nav-link"
+      href="#"
+      role="button"
+    >
+      When will I be invited to configure my Model 3, and when can I take delivery?
+    </a>
+    <a
+      class="nav-link"
+      href="#"
+      role="button"
+    >
+      Which Model 3 features are currently available?
+    </a>
+  </div>
+</div>
+`;

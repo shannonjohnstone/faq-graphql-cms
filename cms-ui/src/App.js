@@ -8,13 +8,11 @@ import Faqs from './containers/Faqs/FaqsContainer'
 
 import { LOADING_QUERY } from './graphqlClient/queries'
 
-import './App.css'
-
 class App extends Component {
   render() {
     return (
       <GraphQLClient>
-        <main className="App">
+        <main className="main">
           <Query query={LOADING_QUERY}>
             {({ loading, error, data }) => {
               return (
