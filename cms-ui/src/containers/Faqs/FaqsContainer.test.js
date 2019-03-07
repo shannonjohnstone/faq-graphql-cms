@@ -1,10 +1,7 @@
 import React from 'react'
-import { MockedProvider } from 'react-apollo/test-utils'
-import { cleanup, render } from 'react-testing-library'
-import { renderWithRouter } from '../../lib/test-tools'
+import { cleanup, reactTestLib, renderWithRouter } from '../../lib/test-tools'
 import FaqsContainer from './FaqsContainer'
 import { FAQS_QUERY } from '../../graphqlClient/queries'
-import CallMutation from '../../components/CallMutation'
 
 const mocks = [
   {
@@ -25,22 +22,10 @@ const mocks = [
 describe('FaqsContainer', () => {
   afterEach(cleanup)
   test('render without errors', async () => {
-    const { getByText } = renderWithRouter(
-      <MockedProvider mocks={mocks} addTypename={false}>
-        <FaqsContainer />
-      </MockedProvider>,
-    )
-
+    const { getByText } = renderWithRouter(FaqsContainer, {
+      mocks,
+      addTypename: false,
+    })
     expect(getByText('FAQS')).toBeTruthy()
-  })
-
-  test('should call mutation, CallMutation', () => {
-    const mockFn = jest.fn()
-    const { getByText } = render(
-      <CallMutation mutation={mockFn}>TEST</CallMutation>,
-    )
-
-    expect(mockFn).toHaveBeenCalled()
-    expect(getByText('TEST')).toBeTruthy()
   })
 })

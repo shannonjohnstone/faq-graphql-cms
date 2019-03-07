@@ -5,7 +5,7 @@ import CallMutation from '../components/CallMutation'
 
 const FetchData = props => {
   return (
-    <Query {...props}>
+    <Query {...props} data-testid="fetchData">
       {({ loading, error, data }) => (
         <Mutation mutation={SET_LOADING}>
           {setLoading => {

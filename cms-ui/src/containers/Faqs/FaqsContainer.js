@@ -12,7 +12,7 @@ const Faqs = () => {
   return (
     <FetchData
       query={FAQS_QUERY}
-      render={({ faqs = [] }) => {
+      render={({ faqs }) => {
         return (
           <Container className="page-section">
             <Link to="/">&lt; Back</Link>

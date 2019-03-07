@@ -1,6 +1,6 @@
 import React from 'react'
 import FaqDetail from './FaqDetail'
-import { render } from 'react-testing-library'
+import { render } from '../../lib/test-tools'
 
 const mockData = [
   {

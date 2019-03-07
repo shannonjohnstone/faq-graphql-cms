@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Button } from 'react-bootstrap'
 import FetchData from '../../components/FetchData'
 import { Link } from 'react-router-dom'
 import './Home.css'
@@ -24,17 +24,15 @@ const Home = () => {
     <FetchData
       query={HOME_QUERY}
       onCompleted={updateStyles}
-      render={({ homepage = {} }) => {
-        return (
-          <section className="home page-section" style={sectionStyles}>
-            <Container>
-              <h1 className="white">{homepage.heading}</h1>
-              <h2 className="white">{homepage.subheading}</h2>
-              {homepage.heading && <Link to="/faqs">Learn more</Link>}
-            </Container>
-          </section>
-        )
-      }}
+      render={({ homepage }) => (
+        <section className="home page-section" style={sectionStyles}>
+          <Container>
+            <h1 className="white">{homepage && homepage.heading}</h1>
+            <h2 className="white">{homepage && homepage.subheading}</h2>
+            {homepage && <Link to="/faqs">Learn More</Link>}
+          </Container>
+        </section>
+      )}
     />
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const FaqsDetail = ({ faqs, selectedIndex }) =>
+const FaqsDetail = ({ faqs = [], selectedIndex }) =>
   faqs.length
     ? faqs
         .filter((item, index) => index === selectedIndex)

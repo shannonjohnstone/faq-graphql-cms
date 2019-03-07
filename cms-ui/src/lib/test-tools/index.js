@@ -1,17 +1,31 @@
 import React from 'react'
 import { Router } from 'react-router-dom'
 import { createMemoryHistory } from 'history'
-import { render } from 'react-testing-library'
+import { render, cleanup, getByText, getByTestId } from 'react-testing-library'
+import { MockedProvider } from 'react-apollo/test-utils'
+import wait from 'waait'
+
+export { wait, MockedProvider, render, cleanup, getByText, getByTestId }
 
 export function renderWithRouter(
-  ui,
+  Component,
+  opts,
   {
     route = '/',
     history = createMemoryHistory({ initialEntries: [route] }),
   } = {},
 ) {
   return {
-    ...render(<Router history={history}>{ui}</Router>),
+    ...render(
+      <Router history={history}>
+        <MockedProvider
+          mocks={opts.mocks}
+          addTypename={opts.addTypename || false}
+        >
+          <Component />
+        </MockedProvider>
+      </Router>,
+    ),
     history,
   }
 }
