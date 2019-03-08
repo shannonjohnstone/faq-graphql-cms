@@ -32,6 +32,10 @@ const client = new ApolloClient({
       },
     },
   },
+  onError: ({ response, graphQLErrors, networkError }) => {
+    const errors = graphQLErrors ? graphQLErrors : networkError
+    console.log(errors, 'errors')
+  },
 })
 
 const GraphQLClient = props => {
